@@ -16,7 +16,7 @@ export const useNavLinkStyles = createStyles((theme) => ({
     "&:hover": {
       backgroundColor: theme.fn.lighten(
         theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-          .background!,
+          .background,
         0.1
       ),
       color: theme.white,
@@ -34,7 +34,7 @@ export const useNavLinkStyles = createStyles((theme) => ({
     "&, &:hover": {
       backgroundColor: theme.fn.lighten(
         theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-          .background!,
+          .background,
         0.15
       ),
       [`& .${getStylesRef("icon")}`]: {
