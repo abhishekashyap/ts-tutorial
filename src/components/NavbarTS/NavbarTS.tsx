@@ -22,7 +22,7 @@ const data = [
   { link: "", label: "Other Settings", icon: IconSettings },
 ];
 
-export function NavbarSimpleColored() {
+export function NavbarTS() {
   const { classes } = useNavbarStyles();
   const [active, setActive] = useState("Billing");
 

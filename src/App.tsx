@@ -7,7 +7,10 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
-import { NavbarSimpleColored } from "./components/Navbar/Navbar";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { NavbarJS } from "./components/NavbarJS";
+import { NavbarTS } from "./components/NavbarTS";
 
 const App = () => {
   const theme = useMantineTheme();
@@ -24,7 +27,7 @@ const App = () => {
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
-      navbar={<NavbarSimpleColored />}
+      navbar={<NavbarTS />}
       header={
         <Header height={{ base: 50, md: 70 }} p="md">
           <div
