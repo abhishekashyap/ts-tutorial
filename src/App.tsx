@@ -1,15 +1,13 @@
-import { useState } from "react";
 import {
   AppShell,
-  Navbar,
-  Header,
-  Footer,
-  Aside,
-  Text,
-  MediaQuery,
   Burger,
+  Header,
+  MediaQuery,
+  Text,
   useMantineTheme,
 } from "@mantine/core";
+import { useState } from "react";
+import { NavbarSimpleColored } from "./components/Navbar/Navbar";
 
 const App = () => {
   const theme = useMantineTheme();
@@ -26,16 +24,7 @@ const App = () => {
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
-      navbar={
-        <Navbar
-          p="md"
-          hiddenBreakpoint="sm"
-          hidden={!opened}
-          width={{ sm: 200, lg: 300 }}
-        >
-          <Text>Application navbar</Text>
-        </Navbar>
-      }
+      navbar={<NavbarSimpleColored />}
       header={
         <Header height={{ base: 50, md: 70 }} p="md">
           <div
