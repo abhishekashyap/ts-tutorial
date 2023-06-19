@@ -1,26 +1,9 @@
 import { Navbar } from "@mantine/core";
-import {
-  Icon2fa,
-  IconBellRinging,
-  IconDatabaseImport,
-  IconFingerprint,
-  IconKey,
-  IconReceipt2,
-  IconSettings,
-} from "@tabler/icons-react";
+
 import { MouseEvent, useState } from "react";
 import { useNavbarStyles } from "./useNavbarStyles";
 import { NavLink } from "./components/NavLink";
 
-const data = [
-  { link: "", label: "Notifications", icon: IconBellRinging },
-  { link: "", label: "Billing", icon: IconReceipt2 },
-  { link: "", label: "Security", icon: IconFingerprint },
-  { link: "", label: "SSH Keys", icon: IconKey },
-  { link: "", label: "Databases", icon: IconDatabaseImport },
-  { link: "", label: "Authentication", icon: Icon2fa },
-  { link: "", label: "Other Settings", icon: IconSettings },
-];
 
 export function NavbarJS() {
   const { classes } = useNavbarStyles();
