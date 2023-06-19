@@ -1,9 +1,9 @@
 import { Navbar } from "@mantine/core";
 
-import { MouseEvent, useState } from "react";
-import { useNavbarStyles } from "./useNavbarStyles";
+import { useState } from "react";
 import { NavLink } from "./components/NavLink";
-
+import { useNavbarStyles } from "./useNavbarStyles";
+import { NAV_ITEM_LIST } from "./constants";
 
 export function NavbarJS() {
   const { classes } = useNavbarStyles();
@@ -17,7 +17,7 @@ export function NavbarJS() {
   return (
     <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}>
       <Navbar.Section grow>
-        {data.map((item) => (
+        {NAV_ITEM_LIST.map((item) => (
           <NavLink
             key={item.label}
             item={item}

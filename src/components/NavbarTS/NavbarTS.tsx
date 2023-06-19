@@ -11,16 +11,7 @@ import {
 import { MouseEvent, useState } from "react";
 import { useNavbarStyles } from "./useNavbarStyles";
 import { NavLink } from "./components/NavLink";
-
-const data = [
-  { link: "", label: "Notifications", icon: IconBellRinging },
-  { link: "", label: "Billing", icon: IconReceipt2 },
-  { link: "", label: "Security", icon: IconFingerprint },
-  { link: "", label: "SSH Keys", icon: IconKey },
-  { link: "", label: "Databases", icon: IconDatabaseImport },
-  { link: "", label: "Authentication", icon: Icon2fa },
-  { link: "", label: "Other Settings", icon: IconSettings },
-];
+import { NAV_ITEM_LIST } from "./constants/navItemList";
 
 export function NavbarTS() {
   const { classes } = useNavbarStyles();
@@ -37,7 +28,7 @@ export function NavbarTS() {
   return (
     <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}>
       <Navbar.Section grow>
-        {data.map((item) => (
+        {NAV_ITEM_LIST.map((item) => (
           <NavLink
             key={item.label}
             item={item}
