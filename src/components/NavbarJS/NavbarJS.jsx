@@ -11,6 +11,12 @@ export function NavbarJS() {
 
   const handleLinkClick = (event, label) => {
     event.preventDefault();
+
+    if (label === "Authentication") {
+      console.log("Emitting gtag event...");
+      console.log("user logged in");
+    }
+
     setActive(label);
   };
 

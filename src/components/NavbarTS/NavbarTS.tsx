@@ -1,17 +1,8 @@
 import { Navbar } from "@mantine/core";
-import {
-  Icon2fa,
-  IconBellRinging,
-  IconDatabaseImport,
-  IconFingerprint,
-  IconKey,
-  IconReceipt2,
-  IconSettings,
-} from "@tabler/icons-react";
 import { MouseEvent, useState } from "react";
-import { useNavbarStyles } from "./useNavbarStyles";
 import { NavLink } from "./components/NavLink";
-import { NAV_ITEM_LIST } from "./constants/navItemList";
+import { NAV_ITEM_LIST, NavItemLabel } from "./constants/navItemList";
+import { useNavbarStyles } from "./useNavbarStyles";
 
 export function NavbarTS() {
   const { classes } = useNavbarStyles();
@@ -19,9 +10,15 @@ export function NavbarTS() {
 
   const handleLinkClick = (
     event: MouseEvent<HTMLAnchorElement>,
-    label: string
+    label: NavItemLabel
   ) => {
     event.preventDefault();
+
+    if (label === "Authentication") {
+      console.log("Emitting gtag event...");
+      console.log("user logged in");
+    }
+
     setActive(label);
   };
 

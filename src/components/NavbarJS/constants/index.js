@@ -1,1 +1,1 @@
-export { NAV_ITEM_LIST } from "./navListItem";
+export { NAV_ITEM_LIST } from "./navItemList";

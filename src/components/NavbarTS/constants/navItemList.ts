@@ -10,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { NAV_ITEMS } from "./navItems";
 
-type NavItemLabel = (typeof NAV_ITEMS)[number];
+export type NavItemLabel = (typeof NAV_ITEMS)[number];
 
 type NavItem = {
   link: string;

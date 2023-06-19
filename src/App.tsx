@@ -27,7 +27,7 @@ const App = () => {
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
-      navbar={<NavbarTS />}
+      navbar={<NavbarJS />}
       header={
         <Header height={{ base: 50, md: 70 }} p="md">
           <div
